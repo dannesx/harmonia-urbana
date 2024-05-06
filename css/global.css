@@ -8,7 +8,6 @@
 
 * {
 	font-family: 'Rubik', sans-serif;
-	color: var(--black) !important;
 }
 
 h1,
@@ -19,21 +18,32 @@ h5,
 h6 {
 	font-family: 'Pirata One';
 	color: var(--primary) !important;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
-a {
+p {
+	font-weight: 300 !important;
+	color: var(--black) !important;
+}
+
+footer {
+	background: var(--black);
+}
+
+.nav-link {
 	color: var(--primary) !important;
 	font-family: 'Pirata One';
 	font-size: 20px !important;
 	letter-spacing: 0.5px;
 }
 
-p{
-	line-height: 1.4;
-	font-weight: 300 !important;
+.nav-link:hover {
+	filter: brightness(1.8);
+	transform: scale(1.1);
+	transition: filter 0.2s, transform 0.2s;
 }
 
-a:hover {
-	filter: brightness(1.8);
-	transition: filter 0.2s;
+.banner {
+	background: var(--primary);
 }
