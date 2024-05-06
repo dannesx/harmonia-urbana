@@ -27,6 +27,10 @@ p {
 	color: var(--black) !important;
 }
 
+li {
+	font-weight: 300 !important;
+}
+
 footer {
 	background: var(--black);
 }
@@ -46,4 +50,10 @@ footer {
 
 .banner {
 	background: var(--primary);
+}
+
+#buy-btn {
+	font-family: 'Pirata One';
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
