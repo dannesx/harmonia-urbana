@@ -27,7 +27,7 @@
 		/>
 		<script src="https://unpkg.com/@phosphor-icons/web"></script>
 		<link rel="stylesheet" href="css/global.css" />
-		<script src="js/produto.js" defer></script>
+		<script src="js/carrinho.js" defer></script>
 	</head>
 	<body class="user-select-none">
 		<header>
@@ -69,10 +69,10 @@
 			</nav>
 		</header>
 
-		<main class="py-4">
+		<main class="py-5">
 			<section class="container">
-				<div class="row">
-					<div class="col-6">
+				<div class="row g-5">
+					<div class="col-7">
 						<h1>Carrinho</h1>
 
 						<div class="card mb-2">
@@ -89,19 +89,157 @@
 										<h4>Guitarra Epiphone Les Paul Custom Koa</h4>
 										<span>Cor: Natural</span>
 									</div>
-
-									<div>
-										<h5>R$ 12.579</h5>
-									</div>
 								</div>
 							</div>
 						</div>
+
+						<div class="text-end fs-5 mb-4">
+							<strong>Total:</strong>
+							<span id="preco">R$ 12.579,00</span>
+						</div>
+
+						<div class="input-group mb-2">
+							<input
+								type="text"
+								name="cupom"
+								id="cupom"
+								class="form-control"
+								placeholder="Insira seu cupom aqui"
+							/>
+							<button class="btn btn-outline-danger" id="cupom-btn">Aplicar Cupom</button>
+						</div>
 					</div>
 
-					<div class="col-6">
-						<h1>Pagamento</h1>
+					<div class="col-5">
+						<form class="bg-body-tertiary p-4 rounded">
+							<fieldset>
+								<legend>Cliente</legend>
+								<div class="row mb-2">
+									<div class="col">
+										<label for="Nome" class="form-label">Nome</label>
+										<input
+											type="text"
+											name="Nome"
+											id="Nome"
+											class="form-control"
+											placeholder="Digite seu nome completo"
+										/>
+									</div>
 
-						<form action=""></form>
+									<div class="col">
+										<label for="Email" class="form-label">Email</label>
+										<input
+											type="email"
+											name="Email"
+											id="Email"
+											class="form-control"
+											placeholder="exemplo@email.com"
+										/>
+									</div>
+								</div>
+							</fieldset>
+
+							<hr />
+
+							<fieldset>
+								<legend>Endereço</legend>
+								<div class="row mb-2">
+									<div class="col">
+										<label for="Endereço" class="form-label">Endereço</label>
+										<input
+											type="text"
+											name="Endereço"
+											id="Endereço"
+											class="form-control"
+											placeholder="Av. Brasil"
+										/>
+									</div>
+
+									<div class="col-3">
+										<label for="Numero" class="form-label">Número</label>
+										<input
+											type="number"
+											name="Numero"
+											id="Numero"
+											class="form-control"
+											placeholder="000"
+										/>
+									</div>
+								</div>
+
+								<div class="row mb-2">
+									<div class="col">
+										<label for="Cidade" class="form-label">Cidade</label>
+										<input
+											type="text"
+											name="Cidade"
+											id="Cidade"
+											class="form-control"
+											placeholder="São Paulo"
+										/>
+									</div>
+
+									<div class="col-3">
+										<label for="Estado" class="form-label">Estado</label>
+										<select name="Estado" id="Estado" class="form-select">
+											<option value="SP" selected>SP</option>
+											<option value="RJ">RJ</option>
+											<option value="MG">MG</option>
+											<option value="ES">ES</option>
+										</select>
+									</div>
+
+									<div class="col-4">
+										<label for="CEP" class="form-label">CEP</label>
+										<input
+											type="number"
+											name="CEP"
+											id="CEP"
+											class="form-control"
+											placeholder="00.000-000"
+										/>
+									</div>
+								</div>
+							</fieldset>
+
+							<hr />
+
+							<fieldset class="mb-2">
+								<legend>Pagamento</legend>
+
+								<div class="mb-2">
+									<div class="form-check">
+										<input
+											type="radio"
+											name="Pagamento"
+											id="AVista"
+											class="form-check-input"
+										/>
+										<label for="AVista" class="form-check-label"
+											>À vista c/ desconto
+											<sub>(PIX, Transf. Bancária)</sub></label
+										>
+									</div>
+
+									<div class="form-check">
+										<input
+											type="radio"
+											name="Pagamento"
+											id="Parcelado"
+											class="form-check-input"
+										/>
+										<label for="Parcelado" class="form-check-label"
+											>Cartão de Crédito <sub>(Até 10x sem juros)</sub></label
+										>
+									</div>
+								</div>
+							</fieldset>
+
+							<button type="submit" class="btn btn-danger w-100">
+								<i class="ph ph-shopping-cart-simple me-1"></i>
+								Finalizar Compra
+							</button>
+						</form>
 					</div>
 				</div>
 			</section>
